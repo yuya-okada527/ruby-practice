@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require './lib/rbg'
+require './lib/rgb'
 
 class RrbTest < Minitest::Test
 
