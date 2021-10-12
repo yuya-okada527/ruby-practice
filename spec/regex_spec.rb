@@ -1,9 +1,7 @@
-require 'minitest/autorun'
-require './lib/regex'
+require 'spec_helper'
 
-class RegexTest < Minitest::Test
-
-  def test_convert_hash_syntax
+RSpec.describe '#convert_hash_syntax' do
+  it '適切に変換されていること' do
     old_syntax = <<-TEXT
     {
       :name => 'Alice',
@@ -18,7 +16,6 @@ class RegexTest < Minitest::Test
       :gender: :female
     }
     TEXT
-    assert_equal expected, convert_hash_syntax(old_syntax)
+    expect(convert_hash_syntax(old_syntax)).to eq expected
   end
-
 end
