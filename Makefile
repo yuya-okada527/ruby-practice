@@ -1,2 +1,2 @@
 run:
-	docker-compose up -d --remove-orphans
+	docker-compose run ruby bundle exec rspec
